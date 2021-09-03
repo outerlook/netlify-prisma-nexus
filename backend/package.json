@@ -1,0 +1,27 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "12.20.23",
+    "prisma": "2.30.3",
+    "ts-node": "10.2.1",
+    "@netlify/functions": "0.7.2",
+    "@kenchi/nexus-plugin-prisma": "0.37.1",
+    "nexus": "1.0.0",
+    "cross-env": "^7.0.3",
+    "graphql": "15.5.2",
+    "apollo-server-lambda": "2.25.2"
+  },
+  "scripts": {
+    "dev": "npx netlify functions:serve",
+    "build": "pnpm run generate:prisma && pnpm run generate:nexus",
+    "generate:prisma": "prisma generate",
+    "generate:nexus": "cross-env GENERATING_SCHEMA=1 ts-node --transpile-only src/generateSchema.ts",
+    "generate": "pnpm run generate:prisma && pnpm run generate:nexus"
+  },
+  "dependencies": {
+    "@prisma/client": "2.30.3"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "netlify-prisma-nexus",
+  "private": true,
+  "scripts": {
+    "backend": "pnpm --filter backend",
+    "build:backend": "pnpm backend build"
+  }
+}

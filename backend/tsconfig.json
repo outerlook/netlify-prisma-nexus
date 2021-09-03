@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "target": "es2020",
+    "module": "CommonJS",
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "Node",
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "rootDir": "src",
+    "baseUrl": ".",
+    "declaration": true,
+    "outDir": "dist",
+    "incremental": true,
+    "sourceMap": true,
+    "noEmitOnError": false,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+  },
+  "exclude": [
+    "prisma/**/*",
+    "../node_modules/**",
+    "**/node_modules/**",
+    "node_modules/**",
+  ],
+  "include": [
+    "./src"
+  ]
+}
