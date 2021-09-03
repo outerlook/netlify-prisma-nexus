@@ -1,4 +1,9 @@
 [functions]
     included_files = ["./prisma/**"]
+    external_node_modules = ["@kenchi/nexus-plugin-prisma"]
 [build]
+    command = "npm install -g pnpm && pnpm -w backend install && pnpm build"
     functions = "src/lambda/"
+[build.environment]
+        NPM_FLAGS="--version" # used to stop npm from installing everything
+        NODE_VERSION='14'
