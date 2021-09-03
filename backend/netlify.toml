@@ -1,3 +1,4 @@
 [functions]
+    included_files = ["./prisma/**"]
 [build]
-functions = "src/lambda/"
+    functions = "src/lambda/"
