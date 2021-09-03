@@ -19,7 +19,6 @@
     "build": "pnpm run generate:prisma && pnpm run generate:nexus",
     "generate:prisma": "prisma generate",
     "generate:nexus": "cross-env GENERATING_SCHEMA=1 ts-node --transpile-only src/generateSchema.ts",
-    "generate": "pnpm run generate:prisma && pnpm run generate:nexus"
   },
   "dependencies": {
     "@prisma/client": "2.30.3"

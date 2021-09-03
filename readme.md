@@ -11,7 +11,8 @@ Just returns the user count. Depends only on prisma
 ## Running locally
 - make sure you have netlify cli installed globally
 - `pnpm install`
-- From the root folder run `pnpm backend dev`
+- `pnpm backend build`
+- `pnpm backend dev`
 
 ## Uploading to netlify
 

@@ -4,6 +4,8 @@ import * as path from "path";
 
 const GENERATING_SCHEMA = process.env.GENERATING_SCHEMA;
 
+
+// we don't want this part to go to serverless function. it is just used as initial schema generation
 const generatingSchemaOnly = GENERATING_SCHEMA ? {
     contextType: {
         module: require.resolve("./context"),
